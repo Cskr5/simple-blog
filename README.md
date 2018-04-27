@@ -51,7 +51,7 @@ Post properties/fields:
 - The input is validated and validation errors are shown under the input fields (4p)
 - Technical req.: "New post is created" is logged using Logback to the console (1p) 
  
-#### 2. US: Post list (14 points)
+#### 2. US: Post list (11 points)
 
 As a user, I want to see my posts in a list sorted in descending order by createdAt, so I can see an overview of them. 
 
@@ -63,7 +63,6 @@ Post's fields to display in the list:
 
 **Acceptance criteria:**
 - The posts are displayed with all fields (if necessary use DTOs) (4p)
-- The feature image size is set to a fix small size (1p)
 - The text is cut, if it is longer than 200 chars (2p)
 - The order of posts is correct (2p)
 - There is a button or link to create "new post" (1p) 
@@ -73,7 +72,7 @@ Post's fields to display in the list:
 **NOT list:**
 - there is no modify and delete post function
  
-#### 3. US: Post details (9 points)
+#### 3. US: Post details (7 points)
 
 As a user, if I click on a post's title, I want to see the post in a separate "Post details" page with all of its data.
    
@@ -81,7 +80,7 @@ As a user, if I click on a post's title, I want to see the post in a separate "P
 - On the "Post list" page the title is clickable (it is a link) for every post that takes to the "Post details" page (3p)
 - All post fields appear (with full length of the text, use DTOs) (4p)
    
-#### 4. US: Post comment (14 point)
+#### 4. US: Post comment (15 point)
 
 As a user, I want to leave comments for posts, so I want to have an "Add comment" button or link on the Post page. 
 I want to see a comment form with the input fields below. 
@@ -102,7 +101,7 @@ the form that has all necessary fields (author and text) and a 'Save comment' bu
 **NOT list:**
 - there is no modify and delete comment function
  
-#### 5. US: Comments under post details (9 point)
+#### 5. US: Comments under post details (8 point)
 
 As a user I want to see all my comments (with all their data) under the Post sorted in descending order by createAt.
   
@@ -115,7 +114,7 @@ Hint: use @OrderBy to get the list of comments in a specific order.
 **Acceptance criteria:**
 - The post's comments are shown with all fields (use DTOs) (4p)
 - In descending order by createdAt (3p)
-- After submitting a new comment, it appears in this list (2p)
+- After submitting a new comment, it appears in this list (1p)
 
 
 ## License 

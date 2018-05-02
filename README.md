@@ -103,7 +103,7 @@ the form that has all necessary fields (author and text) and a 'Save comment' bu
  
 #### 5. US: Comments under post details (8 point)
 
-As a user I want to see all my comments (with all their data) under the Post sorted in descending order by createAt.
+As a user I want to see all my comments (with all their data) under the Post sorted in descending order by createdAt.
   
 Hint: use @OrderBy to get the list of comments in a specific order. 
  ```` 

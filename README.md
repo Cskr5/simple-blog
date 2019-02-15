@@ -47,8 +47,8 @@ Post properties/fields:
 **Acceptance criteria:**
 - The form is shown when opening the "New post" page in a browser (1p)
 - The form has all necessary fields (except createdAt) and a Save button (3p)
-- In case of no error, the post data is stored in the database (if necessary use DTOs) (5p) 
-- The input is validated and validation errors are shown under the input fields (4p)
+- In case of no error, the post data is stored in the database (use DTOs) (6p) 
+- The input is validated and validation errors are logged (3p)
 - Technical req.: "New post is created" is logged using Logback to the console (1p) 
  
 #### 2. US: Post list (11 points)
@@ -80,7 +80,7 @@ As a user, if I click on a post's title, I want to see the post in a separate "P
 - On the "Post list" page the title is clickable (it is a link) for every post that takes to the "Post details" page (3p)
 - All post fields appear (with full length of the text, use DTOs) (4p)
    
-#### 4. US: Post comment (15 point)
+#### 4. US: Post comment (14 point)
 
 As a user, I want to leave comments for posts, so I want to have an "Add comment" button or link on the Post page. 
 I want to see a comment form with the input fields below. 
@@ -95,13 +95,13 @@ Comment properties/fields:
 - The comment button or link is shown when opening a Post page (the form can be on a separate page or on the "Post details" page),
 the form that has all necessary fields (author and text) and a 'Save comment' button (4p)
 - In case of no error, the comment data is stored in the database (use DTOs) (6p)
-- The input is validated and validation errors are shown under the input fields (4p)
+- The input is validated and validation errors are logged (3p)
 - Technical req.: "New comment is created" is logged using Logback to the console (1p) 
     
 **NOT list:**
 - there is no modify and delete comment function
  
-#### 5. US: Comments under post details (8 point)
+#### 5. US: Comments under post details (9 point)
 
 As a user I want to see all my comments (with all their data) under the Post sorted in descending order by createdAt.
   
@@ -114,11 +114,11 @@ Hint: use @OrderBy to get the list of comments in a specific order.
 **Acceptance criteria:**
 - The post's comments are shown with all fields (use DTOs) (4p)
 - In descending order by createdAt (3p)
-- After submitting a new comment, it appears in this list (1p)
+- After submitting a new comment, it appears in this list (2p)
 
 
 ## License 
-Copyright © Progmasters (QTC Kft.), 2016-2018.
+Copyright © Progmasters (QTC Kft.), 2016-2019.
 All rights reserved. No part or the whole of this Teaching Material (TM) may be reproduced, copied, distributed, publicly performed, disseminated to the public, adapted or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of QTC Kft. This TM may only be used for the purposes of teaching exclusively by QTC Kft. and studying exclusively by QTC Kft.’s students and for no other purposes by any parties other than QTC Kft.
 This TM shall be kept confidential and shall not be made public or made available or disclosed to any unauthorized person.
 Any dispute or claim arising out of the breach of these provisions shall be governed by and construed in accordance with the laws of Hungary. 

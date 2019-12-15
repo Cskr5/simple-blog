@@ -11,7 +11,7 @@
 
 - You can use any resource online, but **please work individually**
 - Be careful when copy-pasting parts from previous projects
-- Use Maven and SpringBoot, JPA, Logback libraries for the implementation and Mysql to store data
+- Use Maven and SpringBoot libraries for the implementation and Mysql to store data
 - Use Angular for front-end 
 - Use Bootstrap to make it cool looking
 - Take your time to plan your software (domain objects, software layers, urls, components etc.)

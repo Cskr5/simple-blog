@@ -48,8 +48,8 @@ Post properties/fields:
 - The form is shown when opening the "New post" page in a browser (1p)
 - The form has all necessary fields (except createdAt) and a Save button (3p)
 - In case of no error, the post data is stored in the database (use DTOs) (6p) 
-- The input is validated and validation errors are logged (3p)
-- Server logging: "New post is created" is logged (using Logback or slf4j) to the console (1p) 
+- The input is validated and validation errors are shown (3p)
+- Server logging: "New post is created" is logged (using Logback or slf4j) to the server console (1p) 
 
 #### 2. US: Post list (11 points)
 

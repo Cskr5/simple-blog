@@ -49,7 +49,7 @@ Post properties/fields:
 - The form has all necessary fields (except createdAt) and a Save button (3p)
 - In case of no error, the post data is stored in the database (use DTOs) (6p) 
 - The input is validated and validation errors are logged (3p)
-- Technical req.: "New post is created" is logged using Logback to the console (1p) 
+- Server logging: "New post is created" is logged (using Logback or slf4j) to the console (1p) 
 
 #### 2. US: Post list (11 points)
 
@@ -67,7 +67,7 @@ Post's fields to display in the list:
 - The order of posts is correct (2p)
 - There is a button or link to create "new post" (1p) 
 - After saving a post, the user is redirected here to the Post list page (1p)
-- Technical req.: "Post list page is requested" is logged using Logback to the console (1p) 
+- Server logging: "Post list page is requested" is logged to the console (1p) 
 
 **NOT list:**
 - there is no modify and delete post function
@@ -96,7 +96,7 @@ Comment properties/fields:
 the form that has all necessary fields (author and text) and a 'Save comment' button (4p)
 - In case of no error, the comment data is stored in the database (use DTOs) (6p)
 - The input is validated and validation errors are logged (3p)
-- Technical req.: "New comment is created" is logged using Logback to the console (1p) 
+- Server logging: "New comment is created" is logged to the console (1p) 
   
 
 **NOT list:**

@@ -65,7 +65,7 @@ Post's fields to display in the list:
 - The posts are displayed with all fields (if necessary use DTOs) (4p)
 - The text is cut, if it is longer than 200 chars (2p)
 - The order of posts is correct (2p)
-- There is a button or link to create "new post" (1p) 
+- A button or link is displayed to create "new post" (eg. in the navbar) (1p) 
 - After saving a post, the user is redirected here to the Post list page (1p)
 - Server logging: "Post list page is requested" is logged to the console (1p) 
 

@@ -117,9 +117,24 @@ Hint: use @OrderBy to get the list of comments in a specific order.
 - In descending order by createdAt (3p)
 - After submitting a new comment, it appears in this list (2p)
 
+### Screenshots:
+
+Please note, it's not a requirement to have your application look the same. They only serve as examples!
+
+Post List page:  
+
+![screencapture-localhost-4200-2020-08-18-11_44_33](.\screehshots\screencapture-localhost-4200-2020-08-18-11_44_33.png)
+
+New Post page:  
+
+![screencapture-localhost-4200-new-post-2020-08-18-11_45_12](.\screehshots\screencapture-localhost-4200-new-post-2020-08-18-11_45_12.png)
+
+Blog Details page, with comments section:  
+
+![screencapture-localhost-4200-post-details-1-2020-08-18-11_44_48](.\screehshots\screencapture-localhost-4200-post-details-1-2020-08-18-11_44_48.png)
 
 ## License 
-Copyright © Progmasters (QTC Kft.), 2016-2019.
+Copyright © Progmasters (QTC Kft.), 2016-2020.
 All rights reserved. No part or the whole of this Teaching Material (TM) may be reproduced, copied, distributed, publicly performed, disseminated to the public, adapted or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of QTC Kft. This TM may only be used for the purposes of teaching exclusively by QTC Kft. and studying exclusively by QTC Kft.’s students and for no other purposes by any parties other than QTC Kft.
 This TM shall be kept confidential and shall not be made public or made available or disclosed to any unauthorized person.
 Any dispute or claim arising out of the breach of these provisions shall be governed by and construed in accordance with the laws of Hungary. 

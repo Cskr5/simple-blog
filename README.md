@@ -23,6 +23,22 @@
 Create a simple blog engine that people can use to post their ideas. On every post users can leave
 comments which are displayed under it. 
 
+### Some example screenshot:
+
+*Please note, it's not a requirement to have your application look the same. They only serve as examples!*
+
+Post List page:
+
+![screencapture-localhost-4200-2020-08-18-11_44_33](screehshots/screencapture-localhost-4200-2020-08-18-11_44_33.png)
+
+New Post page:
+
+![screencapture-localhost-4200-new-post-2020-08-18-11_45_12](screehshots/screencapture-localhost-4200-new-post-2020-08-18-11_45_12.png)
+
+Blog Details page, with comments section:
+
+![screencapture-localhost-4200-post-details-1-2020-08-18-11_44_48](screehshots/screencapture-localhost-4200-post-details-1-2020-08-18-11_44_48.png)
+
 ### User stories:
 
 #### 0. Backlog item: Config (5 points)
@@ -117,21 +133,6 @@ Hint: use @OrderBy to get the list of comments in a specific order.
 - In descending order by createdAt (3p)
 - After submitting a new comment, it appears in this list (2p)
 
-### Screenshots:
-
-Please note, it's not a requirement to have your application look the same. They only serve as examples!
-
-Post List page:  
-
-![screencapture-localhost-4200-2020-08-18-11_44_33](.\screehshots\screencapture-localhost-4200-2020-08-18-11_44_33.png)
-
-New Post page:  
-
-![screencapture-localhost-4200-new-post-2020-08-18-11_45_12](.\screehshots\screencapture-localhost-4200-new-post-2020-08-18-11_45_12.png)
-
-Blog Details page, with comments section:  
-
-![screencapture-localhost-4200-post-details-1-2020-08-18-11_44_48](.\screehshots\screencapture-localhost-4200-post-details-1-2020-08-18-11_44_48.png)
 
 ## License 
 Copyright © Progmasters (QTC Kft.), 2016-2020.

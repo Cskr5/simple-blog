@@ -104,11 +104,11 @@ I want to see a comment form with the input fields below.
 Comment properties/fields:
 - author (String, optional)
 - text (String, mandatory)
-- createdAt (LocalDateTime, not given by user, but server sets it)
+- createdAt (LocalDateTime or ZonedDateTime, not given by user, but server sets it)
 - (relation to the Post it belongs to) 
 
 **Acceptance criteria:**
-- The comment button or link is shown when opening a Post page (the form can be on a separate page or on the "Post details" page),
+- The comment button/link or the comment form itself is shown when opening a Post page (the form can be on a separate page or on the "Post details" page),
 the form that has all necessary fields (author and text) and a 'Save comment' button (4p)
 - In case of no error, the comment data is stored in the database (use DTOs) (6p)
 - The input is validated and validation errors are logged (3p)

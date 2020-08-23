@@ -33,11 +33,11 @@ Post List page:
 
 New Post page:
 
-<img src="./screehshots/NewBlogPost.jpg" width=160 height=140/>
+<img src="./screehshots/NewBlogPost.jpg" width=326 height=286/>
 
 Blog Details page, with comments section:
 
-<img src="./screehshots/BlogDetailsPage.jpg" width=200 height=400/>
+<img src="./screehshots/BlogDetailsPage.jpg" width=430 height=804/>
 
 ### User stories:
 

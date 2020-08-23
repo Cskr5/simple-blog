@@ -57,7 +57,7 @@ Post properties/fields:
 - title (String, mandatory)
 - text (String, mandatory)
 - feature image url (String, optional)
-- createdAt (LocalDateTime, not given by user, but server sets it)
+- createdAt (LocalDateTime or ZonedDateTime, not given by user, but server sets it)
   
 
 **Acceptance criteria:**

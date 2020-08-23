@@ -29,15 +29,15 @@ comments which are displayed under it.
 
 Post List page:
 
-![screencapture-localhost-4200-2020-08-18-11_44_33](screehshots/screencapture-localhost-4200-2020-08-18-11_44_33.png)
+![BlogPostList.jpg](screehshots/BlogPostList.jpg)
 
 New Post page:
 
-![screencapture-localhost-4200-new-post-2020-08-18-11_45_12](screehshots/screencapture-localhost-4200-new-post-2020-08-18-11_45_12.png)
+![NewBlogPost](screehshots/NewBlogPost.jpg)
 
 Blog Details page, with comments section:
 
-![screencapture-localhost-4200-post-details-1-2020-08-18-11_44_48](screehshots/screencapture-localhost-4200-post-details-1-2020-08-18-11_44_48.png)
+![BlogDetailsPage](screehshots/BlogDetailsPage.jpg)
 
 ### User stories:
 

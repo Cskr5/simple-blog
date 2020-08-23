@@ -24,7 +24,8 @@ spring:
 
 logging:
   level:
-    hu.progmasters: debug
+    root: info
+    com.progmasters: debug
     org.springframework.web: info
     org.hibernate: error
   pattern:

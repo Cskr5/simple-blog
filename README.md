@@ -29,15 +29,15 @@ comments which are displayed under it.
 
 Post List page:
 
-![BlogPostList.jpg](screehshots/BlogPostList.jpg)
+<img src="./screehshots/BlogPostList.jpg" style="max-width: 400px"/>
 
 New Post page:
 
-![NewBlogPost](screehshots/NewBlogPost.jpg)
+<img src="./screehshots/NewBlogPost.jpg" style="max-width: 250px"/>
 
 Blog Details page, with comments section:
 
-![BlogDetailsPage](screehshots/BlogDetailsPage.jpg)
+<img src="./screehshots/BlogDetailsPage.jpg" style="max-width: 400px"/>
 
 ### User stories:
 

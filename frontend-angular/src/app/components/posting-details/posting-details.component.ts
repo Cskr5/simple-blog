@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {PostingService} from "../../services/posting.service";
 import {PostDetailsDataModel} from "../../models/postDetailsDataModel";
 import {FormBuilder} from "@angular/forms";
+import {handleValidationErrors} from "../../services/errorMessage";
 
 @Component({
   selector: 'app-posting-details',
@@ -40,7 +41,8 @@ export class PostingDetailsComponent implements OnInit {
     let commentData = {...this.commentForm.value};
     this.postingService.saveComment(commentData, id)
       .subscribe(() => this.postingService.getPostById(id).subscribe(
-        (p) => this.post = p
+        (p) => this.post = p,
+        error => handleValidationErrors(error, this.commentForm),
         )
       )
   }

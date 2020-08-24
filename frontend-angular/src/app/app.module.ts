@@ -10,7 +10,6 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { PostingDetailsComponent } from './components/posting-details/posting-details.component';
-import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     PostingFormComponent,
     PostingListComponent,
     PageNotFoundComponent,
-    PostingDetailsComponent,
-    CommentsComponent
+    PostingDetailsComponent
   ],
   imports: [
     BrowserModule,

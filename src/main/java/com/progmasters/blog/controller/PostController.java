@@ -1,6 +1,7 @@
 package com.progmasters.blog.controller;
 
 import com.progmasters.blog.domain.Post;
+import com.progmasters.blog.dto.CommentDetailsItem;
 import com.progmasters.blog.dto.PostDetailsItem;
 import com.progmasters.blog.dto.PostFormItem;
 import com.progmasters.blog.dto.PostListItem;

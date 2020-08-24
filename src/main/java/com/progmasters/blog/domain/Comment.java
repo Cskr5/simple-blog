@@ -1,5 +1,7 @@
 package com.progmasters.blog.domain;
 
+import com.progmasters.blog.dto.CommentDetailsItem;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -22,6 +24,13 @@ public class Comment {
     public Comment(String author, String text, Post post) {
         this.author = author;
         this.text = text;
+        this.createdAt = LocalDateTime.now();
+        this.post = post;
+    }
+
+    public Comment(CommentDetailsItem commentDetailsItem, Post post) {
+        this.author = commentDetailsItem.getAuthor();
+        this.text = commentDetailsItem.getText();
         this.createdAt = LocalDateTime.now();
         this.post = post;
     }

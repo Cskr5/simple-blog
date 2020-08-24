@@ -4,10 +4,49 @@
     <h5 class="card-title">{{post.title}}</h5>
     <p class="card-text">{{post.text}}</p>
     <small class="card-text">{{post.createdAt}}</small>
-    <div *ngFor="let comment of post.comments">
-      <p>{{comment.author}}</p>
-      <p>{{comment.text}}</p>
-      <p>{{comment.createdAt}}</p>
+  </div>
+</div>
+
+<div class="container m-3 ">
+  <h4>Add new comment: </h4>
+  <form [formGroup]="commentForm" (ngSubmit)="submitComment(post.id)">
+
+    <div class="form-group">
+      <label for="author">Author name</label>
+      <input formControlName="author" type="text" class="form-control" id="author">
+      <small class="text-danger">{{commentForm.get('author').errors?.serverError}}</small>
+    </div>
+
+    <div class="form-group">
+      <label for="text">Text</label>
+      <textarea formControlName="text" type="text" class="form-control" id="text"></textarea>
+      <small class="text-danger">{{commentForm.get('text').errors?.serverError}}</small>
+    </div>
+    <button type="submit" class="btn btn-primary m-2">Add comment</button>
+  </form>
+</div>
+
+<div class="container ">
+  <div class="row" *ngFor="let comment of post.comments">
+    <div class="col-8">
+      <div class="card card-white post">
+        <div class="post-heading">
+          <div class="float-left image m-2">
+            <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+          </div>
+          <div class="float-left meta">
+            <div class="title h5 m-2" >
+              <a href="#"><b>{{comment.author}}</b></a>
+              made a post.
+            </div>
+            <h6 class="text-muted time">{{comment.createdAt}}</h6>
+          </div>
+        </div>
+        <div class="post-description m-2">
+          <p>{{comment.text}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

@@ -3,6 +3,7 @@ import {PostListDataModel} from "../../models/postListDataModel";
 import {ActivatedRoute, Router} from "@angular/router";
 import {PostingService} from "../../services/posting.service";
 import {PostDetailsDataModel} from "../../models/postDetailsDataModel";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-posting-details',
@@ -12,8 +13,13 @@ import {PostDetailsDataModel} from "../../models/postDetailsDataModel";
 export class PostingDetailsComponent implements OnInit {
 
   post: PostDetailsDataModel;
+  commentForm =  this.formBuilder.group(
+    {
+      author: [''],
+      text: ['']
+    });
 
-  constructor(private postingService: PostingService, private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private postingService: PostingService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.paramMap.subscribe(
       paramMap => {
         const idParam = paramMap.get("id");
@@ -28,6 +34,15 @@ export class PostingDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  submitComment(id: number) {
+    let commentData = {...this.commentForm.value};
+    this.postingService.saveComment(commentData,id)
+      .subscribe( () => this.postingService.getPostById(id).subscribe(
+        (p) => this.post =p
+        )
+      )
   }
 
 }

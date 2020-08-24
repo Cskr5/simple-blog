@@ -34,7 +34,7 @@ public class PostValidator implements Validator {
             errors.rejectValue("title", "title.invalid-length");
         }
 
-        if (text == null || text.length() < 3 || text.length() > 1500) {
+        if (text == null || text.length() < 10 || text.length() > 1500) {
             errors.rejectValue("text", "text.invalid-length");
         }
     }

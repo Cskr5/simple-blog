@@ -18,6 +18,7 @@ public class Post {
 
     private String title;
     @Size(min = 3, max = 1500)
+    @Lob
     private String text;
     @Nullable
     @URL

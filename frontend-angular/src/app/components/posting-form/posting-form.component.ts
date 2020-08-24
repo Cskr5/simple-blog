@@ -29,9 +29,7 @@ export class PostingFormComponent implements OnInit {
     this.postingService.savePost(postData)
       .subscribe( () => {
         this.router.navigate(['posting-list']);},
-        error => handleValidationErrors(error, this.postingForm),
-
+        // error => handleValidationErrors(error, this.postingForm),
       )
-
   }
 }

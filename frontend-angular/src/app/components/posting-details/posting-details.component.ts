@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PostListDataModel} from "../../models/postListDataModel";
 import {ActivatedRoute, Router} from "@angular/router";
 import {PostingService} from "../../services/posting.service";
@@ -13,11 +13,14 @@ import {FormBuilder} from "@angular/forms";
 export class PostingDetailsComponent implements OnInit {
 
   post: PostDetailsDataModel;
-  commentForm =  this.formBuilder.group(
+  commentForm = this.formBuilder.group(
     {
       author: [''],
       text: ['']
     });
+
+  ngOnInit(): void {
+  }
 
   constructor(private formBuilder: FormBuilder, private postingService: PostingService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.paramMap.subscribe(
@@ -26,21 +29,18 @@ export class PostingDetailsComponent implements OnInit {
         if (isNaN(+idParam) || +idParam < 0) {
           router.navigate(['posting-list'])
         } else {
-          this.postingService.getPostById(+idParam).
-          subscribe( (details) => this.post = details
-          )
+          this.postingService.getPostById(+idParam)
+            .subscribe((details) => {this.post = details; console.log(this.post)}
+            )
         }
       });
   }
 
-  ngOnInit(): void {
-  }
-
   submitComment(id: number) {
     let commentData = {...this.commentForm.value};
-    this.postingService.saveComment(commentData,id)
-      .subscribe( () => this.postingService.getPostById(id).subscribe(
-        (p) => this.post =p
+    this.postingService.saveComment(commentData, id)
+      .subscribe(() => this.postingService.getPostById(id).subscribe(
+        (p) => this.post = p
         )
       )
   }

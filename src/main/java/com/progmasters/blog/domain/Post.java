@@ -15,10 +15,9 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
-    @Size(min = 3, max = 1500)
-    @Lob
+
+    @Column(columnDefinition = "TEXT")
     private String text;
     @Nullable
     @URL

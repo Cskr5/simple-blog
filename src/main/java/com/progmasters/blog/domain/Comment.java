@@ -12,6 +12,8 @@ public class Comment {
     private Long id;
 
     private String author;
+
+    @Column(columnDefinition = "TEXT")
     private String text;
     private LocalDateTime createdAt;
 

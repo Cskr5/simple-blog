@@ -41,13 +41,14 @@ public class PostController {
     @PostMapping
     public ResponseEntity<Void> createPost(@Valid @RequestBody PostFormItem postFormItem) {
         Long postId = postService.createPost(postFormItem);
-        logger.debug("Post successfully created with id: " + postId);
+        logger.info("Post successfully created with id: " + postId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping
     public ResponseEntity<List<PostListItem>> getAllPosts() {
         List<PostListItem> postsToList = postService.selectAllPosts();
+        logger.info("Post list page is requested");
         return new ResponseEntity<>(postsToList, HttpStatus.OK);
     }
 

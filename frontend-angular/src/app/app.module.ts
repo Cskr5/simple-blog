@@ -9,6 +9,7 @@ import {PostingListComponent} from './components/posting-list/posting-list.compo
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {HttpClientModule} from "@angular/common/http";
     NavbarComponent,
     PostingFormComponent,
     PostingListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,

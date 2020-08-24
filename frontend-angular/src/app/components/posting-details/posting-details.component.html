@@ -1,0 +1,13 @@
+<div class="card">
+  <img class="card-img-top" [src]="post.url" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.text}}</p>
+    <small class="card-text">{{post.createdAt}}</small>
+    <div *ngFor="let comment of post.comments">
+      <p>{{comment.author}}</p>
+      <p>{{comment.text}}</p>
+      <p>{{comment.createdAt}}</p>
+    </div>
+  </div>
+</div>

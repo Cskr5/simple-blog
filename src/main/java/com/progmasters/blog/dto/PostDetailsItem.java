@@ -4,18 +4,20 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.progmasters.blog.domain.Comment;
 import com.progmasters.blog.domain.Post;
 
+import javax.persistence.OrderBy;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PostDetailsItem {
-
         private Long id;
         private String url;
         private String title;
         private String text;
         @JsonFormat(pattern = "YYYY.MMM dd - HH:mm")
         private LocalDateTime createdAt;
-        private List<Comment> comments;
+        @OrderBy(value = "createdAt desc ")
+        private List<CommentDetailsItem> comments;
 
     public PostDetailsItem(Post post) {
         this.id = post.getId();
@@ -23,7 +25,9 @@ public class PostDetailsItem {
         this.title = post.getTitle();
         this.text = post.getText();
         this.createdAt =post.getCreatedAt();
-        this.comments = post.getComments();
+        this.comments = post.getComments().stream()
+                .map(CommentDetailsItem::new)
+                .collect(Collectors.toList());
     }
 
     public Long getId() {
@@ -46,7 +50,7 @@ public class PostDetailsItem {
         return createdAt;
     }
 
-    public List<Comment> getComments() {
+    public List<CommentDetailsItem> getComments() {
         return comments;
     }
 }

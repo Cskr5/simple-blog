@@ -58,10 +58,6 @@ public class Comment {
         this.createdAt = createdAt;
     }
 
-    public Post getPost() {
-        return post;
-    }
-
     public void setPost(Post post) {
         this.post = post;
     }

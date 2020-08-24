@@ -17,7 +17,7 @@ public class Post {
     private String url;
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "post")
+    @OneToMany(mappedBy = "post",fetch = FetchType.LAZY)
     private List<Comment> comments = new ArrayList<>();
 
     public Post() {

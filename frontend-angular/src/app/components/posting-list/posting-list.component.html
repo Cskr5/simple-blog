@@ -3,7 +3,7 @@
     <div class="card" >
       <img class="card-img-top" [src]="post.url" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title" (click)="goToDetails(post.id) ">{{post.title}}</h5>
+        <h5 class="card-title" (click)="goToDetails(+post.id) ">{{post.title}}</h5>
         <p class="card-text">{{post.text}}</p>
         <small>{{post.createdAt}}</small><br>
         <a href="#" class="btn btn-primary m-1">Read more...</a>

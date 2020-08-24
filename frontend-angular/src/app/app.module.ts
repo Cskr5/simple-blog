@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostingFormComponent } from './posting-form/posting-form.component';
 import { PostingListComponent } from './posting-list/posting-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PostingFormComponent,
-    PostingListComponent
+    PostingListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
 import {PostingService} from "../../services/posting.service";
+import {handleValidationErrors} from "../../services/errorMessage";
 
 @Component({
   selector: 'app-posting-form',
@@ -29,7 +30,7 @@ export class PostingFormComponent implements OnInit {
     this.postingService.savePost(postData)
       .subscribe( () => {
         this.router.navigate(['posting-list']);},
-        // error => handleValidationErrors(error, this.postingForm),
+        error => handleValidationErrors(error, this.postingForm),
       )
   }
 }

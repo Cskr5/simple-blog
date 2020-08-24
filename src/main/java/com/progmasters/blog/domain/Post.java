@@ -1,8 +1,11 @@
 package com.progmasters.blog.domain;
 
 import com.progmasters.blog.dto.PostFormItem;
+import org.hibernate.validator.constraints.URL;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +15,12 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
+    @Size(min = 3, max = 1500)
     private String text;
+    @Nullable
+    @URL
     private String url;
     private LocalDateTime createdAt;
 

@@ -1,0 +1,23 @@
+<h1>Create a new blog post: </h1>
+<form [formGroup]="postingForm" (ngSubmit)="submitPost()">
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input formControlName="title" type="text" class="form-control" id="title">
+    <small class="text-danger">{{postingForm.get('title').errors?.serverError}}</small>
+  </div>
+
+  <div class="form-group">
+    <label for="text">Text</label>
+    <textarea formControlName="text" type="text" class="form-control" id="text"></textarea>
+    <small class="text-danger">{{postingForm.get('text').errors?.serverError}}</small>
+  </div>
+
+  <div class="form-group">
+    <label for="url">Feature image url</label>
+    <input formControlName="url" type="text" class="form-control" id="url">
+    <small class="text-danger">{{postingForm.get('url').errors?.serverError}}</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

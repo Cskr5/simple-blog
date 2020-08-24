@@ -8,9 +8,9 @@ spring:
       # Force the encoding to the configured charset on HTTP requests and responses.
       force: true
   datasource:
-    url: jdbc:mysql://localhost:3306/DATABASE_NAME?serverTimezone=UTC&useSSL=false&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=UTC&useSSL=false&characterEncoding=utf8
     username: root
-    password: test1234
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

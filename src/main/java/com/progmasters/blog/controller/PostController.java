@@ -1,6 +1,7 @@
 package com.progmasters.blog.controller;
 
 import com.progmasters.blog.domain.Post;
+import com.progmasters.blog.dto.PostDetailsItem;
 import com.progmasters.blog.dto.PostFormItem;
 import com.progmasters.blog.dto.PostListItem;
 import com.progmasters.blog.repository.PostRepository;
@@ -34,4 +35,10 @@ public class PostController {
         List<PostListItem> postsToList = postService.selectAllPosts();
         return new ResponseEntity<>(postsToList, HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PostDetailsItem> getPost(@PathVariable Long id) {
+        return new ResponseEntity<PostDetailsItem>(postService.getPostDetails(id), HttpStatus.OK);
+    }
+
 }

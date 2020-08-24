@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {PostFormDataModel} from "../models/postFormDataModel";
 import {PostListDataModel} from "../models/postListDataModel";
+import {PostDetailsDataModel} from "../models/postDetailsDataModel";
 
 const BASE_URL = 'http://localhost:8080/api/posts';
 
@@ -11,13 +12,18 @@ const BASE_URL = 'http://localhost:8080/api/posts';
 })
 export class PostingService {
 
-  constructor(private http: HttpClient) { }
-
-  savePost(dataModel: PostFormDataModel): Observable<any> {
-    return this.http.post(BASE_URL,dataModel);
+  constructor(private http: HttpClient) {
   }
 
-  getAllPosts(): Observable<PostListDataModel[]>{
+  savePost(dataModel: PostFormDataModel): Observable<any> {
+    return this.http.post(BASE_URL, dataModel);
+  }
+
+  getAllPosts(): Observable<PostListDataModel[]> {
     return this.http.get<PostListDataModel[]>(BASE_URL);
+  }
+
+  getPostById(id: number): Observable<PostDetailsDataModel> {
+    return this.http.get<PostDetailsDataModel>(BASE_URL + '/' + id);
   }
 }

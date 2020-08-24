@@ -1,5 +1,7 @@
 package com.progmasters.blog.domain;
 
+import com.progmasters.blog.dto.PostFormItem;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.List;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String title;
     private String text;
     private String url;
@@ -28,11 +30,18 @@ public class Post {
         this.createdAt = LocalDateTime.now();
     }
 
-    public long getId() {
+    public Post(PostFormItem postFormItem) {
+        this.title = postFormItem.getTitle();
+        this.text = postFormItem.getText();
+        this.url = postFormItem.getUrl();
+        this.createdAt = LocalDateTime.now();
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

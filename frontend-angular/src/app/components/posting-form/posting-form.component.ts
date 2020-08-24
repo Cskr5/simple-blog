@@ -25,7 +25,7 @@ export class PostingFormComponent implements OnInit {
   }
 
   submitPost() {
-    let postData = this.postingForm.value;
+    let postData = {...this.postingForm.value};
     this.postingService.savePost(postData)
       .subscribe( () => {
         this.router.navigate(['posting-list']);},

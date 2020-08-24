@@ -1,5 +1,6 @@
 package com.progmasters.blog.service;
 
+import com.progmasters.blog.domain.Post;
 import com.progmasters.blog.dto.PostFormItem;
 import com.progmasters.blog.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public void createPost(PostFormItem postFormItem) {
+    public Long createPost(PostFormItem postFormItem) {
+        Post post = new Post(postFormItem);
+        postRepository.save(post);
+        return post.getId();
     }
 }
